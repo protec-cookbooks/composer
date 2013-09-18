@@ -34,6 +34,5 @@ if node[:composer][:install_globally]
 		code <<-EOH
 			sudo mv composer.phar #{node[:composer][:prefix]}/bin/composer
 		EOH
-		not_if "which composer"
 	end
 end
