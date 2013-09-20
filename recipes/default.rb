@@ -25,7 +25,6 @@ bash "download_composer" do
 	code <<-EOH
 		#{command}
 	EOH
-	not_if "which composer"
 end
 
 if node[:composer][:install_globally]
